@@ -1,0 +1,76 @@
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "email": "test@mail.com",
+    "password": "password",
+    "owner": {
+        "firstname": "test",
+        "lastname": "test",
+        "address": "address",
+        "city": "city",
+        "telephone": "0102030405"
+    }
+}
+
+###
+
+GET http://localhost:3000/users
+
+###
+
+GET http://localhost:3000/users/1
+
+###
+
+GET http://localhost:3000/pets
+
+###
+
+GET http://localhost:3000/vets
+
+###
+
+GET http://localhost:3000/vets/1
+
+###
+
+POST http://localhost:3000/vets
+Content-Type: application/json
+
+{
+    "firstname": "firstname2",
+    "lastname": "lastname2",
+    "specialities": [{"name": "speciality1"}]
+}
+###
+
+POST http://localhost:3000/specialities
+Content-Type: application/json
+
+{
+    "name": "speciality3"
+}
+
+###
+
+GET http://localhost:3000/specialities
+
+###
+
+GET http://localhost:3000/specialities/4
+
+###
+
+GET http://localhost:3000/visits/4
+
+###
+
+POST http://localhost:3000/visits/
+Content-Type: application/json
+
+{
+    "pet": 3,
+    "visitdate": "2022-10-03",
+    "description": "Visit"
+}
